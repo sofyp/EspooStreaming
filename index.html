@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wowza player test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="simple-grid.css">
+    
+    
+    <style>
+        
+        
+        .white-box{
+            box-sizing: border-box;
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 0px 0px 30px 2px #888888;
+            background-color: azure;
+            position: relative;
+            z-index: 1;
+        }
+        .white-bg{
+            background-color: azure;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .balloons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 0;
+        }
+        
+        .tervetuloa {
+            padding: 20px;
+        }
+
+    
+    </style>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.js"></script>
+    <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+<div class="container">
+    
+    
+    
+    <div class="row"><div class="col-12">Sofia 10v STREAM</div></div>
+    
+    <div class="white-box">
+        
+        <div class="tervetuloa">Tervetuloa seuraamaan: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in orci tristique, vehicula arcu non, pharetra metus. In hac habitasse platea dictumst. Cras aliquam dapibus eros sed molestie. Sed iaculis odio a lacinia gravida. Etiam at mi eget odio tempus mattis. Maecenas vulputate, tellus a imperdiet ultrices, erat lectus consequat dui, ac lobortis massa lectus vitae justo. Sed fringilla non libero ac imperdiet.</div>
+        
+        <div class="row white-bg">
+            <div class="col-6 no-right">
+               <div id="playerElement1" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+  
+  
+  
+  
+  <script type="text/javascript">
+    WowzaPlayer.create('playerElement1',
+      {
+        "license":"PLAY1-ejrM8-zjEKd-6A4J7-9JJnM-7kju6",
+        "title":"GoCoder",
+        "description":"", "sourceURL":"http%3A%2F%2F195.148.104.124%3A1935%2Fmobile%2Fsofia%2Fplaylist.m3u8",
+        "autoPlay":false,
+        "volume":"75",
+        "mute":false,
+        "loop":false,
+        "audioOnly":false,
+        "uiShowQuickRewind":true,
+        "uiQuickRewindSeconds":"30"
+      }
+    );
+  </script>
+</body>
+
+</html>
