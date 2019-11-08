@@ -1,180 +1,155 @@
-*{
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
+html,
+body {
+    width: 100vw;
     margin: 0;
     padding: 0;
+    left: 0;
+    top: 0;
+    font-size: 100%;
+    background: -webkit-linear-gradient(-8deg, #fafafa, #ffffff);
+    background: linear-gradient(-8deg, #fafafa, #ffffff);
+    background-repeat: no-repeat;
 }
-body {
-    background-image: linear-gradient(to bottom right, #E69B0A, #C8367A);
-    background-size: cover;
-    margin: 0 0 0 0;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
+
+html {
+    background-color: #fafafa;
 }
-nav{
-    background-color: #2e2e2f !important;
+.btn {
+  padding: 12px !important;
 }
-footer{
-    background-color: #2e2e2f;
-    height: 10vmin;
-    width: 100vw;
-    position: absolute;
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    color: #FFFFFF;
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
 }
-footer img {
-    width: 30vmin;
+.flexing {
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 150px; 
+}
+.nav-style {
+  background-color: #00B6F0;
+  position: fixed;
+  top: 0;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  width: 100vw;
+  z-index: 1000;
+}
+.img-nav {
+  margin-top: 50px;
+  background-color: #00B6F0;
+}
+#logo {
+  background-image: url(https://fl-cdn.scdn1.secure.raxcdn.com/files/sites/756/parhaassaseurassa3.svg);
+  background-repeat: no-repeat;
+  display: block;
+  background-size: cover; 
+  height: 180px;
+  width: 300px;
+  margin: auto;
+  object-fit: cover;
+  object-position: 0 0;
+  transition: 0.2s;
+}
+.beactive {
+  background-image: url(img/beActive.png);
+  background-repeat: no-repeat;
+  display: block;
+  background-size: cover; 
+  height: 75px;
+  width: 420px;
+  margin: auto 9px auto 9px;
 }
 footer {
-    font-size: 2.5vmin;
+  width: 100vw;
+  background-color: #00B6F0;
+  position: relative;
+  height: 150px;
+  margin-top: -150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.body-container{
-    width: auto;
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #333447;
+  line-height: 1.5;
 }
-.content{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
-    padding-bottom: 5vmax;
-    height: calc(100vh - 23vmin - 16px - 4vh); /*15vh includes .header margin-top & .header height. 96px includes navbar & footer*/
+h5,
+p{
+  color: #ffffff;
 }
-@media screen and (max-width: 1000px) {
-    .content{
-        height: auto;
-    }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px !important;
 }
-.outer-content{
-    flex-direction: column;
+.sidenav a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-.header{
-    height: 13vmin;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin: 2vh 0 2vh 0;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
-.header span {
-    font-family: "Roboto" , sans-serif;
-    font-size: 4.4vmin;
-    color: #FFFFFF;
+.sidenav ul li {
+  color: #f1f1f1;
+  list-style: none;
 }
-.logo{
-    height: 100%;
-    width: 11vmin; /*width: 80px;*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 20px 0 20px;
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-.logo-box{
-    box-sizing: border-box;
-    border-radius: 1.4vmin; /*10px;*/
-    background-color: #2e2e2f;
-    width: 3.4vmin; /*25px;*/
+.sidenav .sidenav-title {
+  color: #f1f1f1;
+  margin-left: 30px;
 }
-.logo-1{
-    height: 80%;
+.navbutton {
+  padding-left: 1vw !important;
 }
-.logo-2{
-    height: 50%;
+.card-textbox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  color: #333447 !important;
 }
-.logo-3{
-    height: 25%;
+.social-box {
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 9px;
+  margin:  auto 9px auto 9px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-.content-card{
-    font-family: "Roboto" , sans-serif;
-    letter-spacing: 0.05em;
-    display: flex;
-    background-color: #2e2e2f;
-    max-height: 65vh;
-    position: relative;
-    border-radius: 12px;
-    color: #FFFFFF;
+svg {
+  margin: auto;
+  fill: #00B6F0;
 }
-.video-card{
-    width: 50vw;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
-#stream1{
-    width: 100vmin;
-    max-width: 100%;
-    padding: 1%;
-    display: inline-block;
-}
-#playerElement{
-    width:100%;
-    height:0;
-    padding:0 0 56.25% 0
-}
-.menu-card{
-    font-size: 2vmin;
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    padding: 2vw;
-}
-#get-date{
-    font-size: 2.4vmin;
-    margin-bottom: 2vmin;
-}
-#sodexo-menu div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    box-sizing: unset;
-}
-#sodexo-menu div p {
-    width: 50%;
-}
-#sodexo-menu div div{
-    margin-left: 5px;
-    justify-content: space-between;
-    width: 30%;
-}
-#sodexo-menu div div p:nth-child(1){
-    min-width: max-content;
-}
-#sodexo-menu div div p:nth-child(2){
-    margin-left: 1.5vw;
-    min-width: max-content;
-    display: block;
-}
-@media screen and (max-width: 1200px) {
-    #sodexo-menu div p {
-        margin-bottom: 0.5rem;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .video-card {
-        width: 90vmin;
-        margin-bottom: 20px;
-        padding: 2vh 0;
-    }
-    .menu-card {
-        width: 90vw;
-        margin-bottom: 20px;
-        font-size: 1.6vmax;
-    }
-    #get-date{
-        margin: 1vmax 0 2vmax 0;
-        font-size: 1.8vmax;
-    }
-    .content-card{
-        max-height: initial;
-    }
-    #sodexo-menu div p {
-        margin-bottom: 1rem;
-    }
-}
-@media screen and (max-width: 400px) {
-    #sodexo-menu div div p:nth-child(2){
-        display: none;
-    }
-}
+
