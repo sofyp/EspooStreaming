@@ -1,269 +1,180 @@
-/**
-*** SIMPLE GRID
-*** (C) ZACH COLE 2016
-**/
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
-
-/* UNIVERSAL */
-
-html,
-body {
-    height: 100%;
-    width: 100%;
+*{
     margin: 0;
     padding: 0;
-    left: 0;
-    top: 0;
-    font-size: 100%;
-    
-
-    background: -webkit-linear-gradient(-8deg, rgb(246, 151, 12), rgb(255, 248, 207));
-    background: linear-gradient(-8deg, rgb(246, 151, 12), rgb(255, 248, 207));
-    background-repeat: no-repeat;
-
-
 }
-
-html {
-    background-color: rgb(246, 151, 12);
+body {
+    background-image: linear-gradient(to bottom right, #E69B0A, #C8367A);
+    background-size: cover;
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
-
-/* ROOT FONT STYLES */
-
-* {
-  font-family: 'Lato', Helvetica, sans-serif;
-  color: #333447;
-  line-height: 1.5;
+nav{
+    background-color: #2e2e2f !important;
 }
-
-/* TYPOGRAPHY */
-
-h1 {
-  font-size: 2.5rem;
+footer{
+    background-color: #2e2e2f;
+    height: 10vmin;
+    width: 100vw;
+    position: absolute;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    color: #FFFFFF;
 }
-
-h2 {
-  font-size: 2rem;
+footer img {
+    width: 30vmin;
 }
-
-h3 {
-  font-size: 1.375rem;
+footer {
+    font-size: 2.5vmin;
 }
-
-h4 {
-  font-size: 1.125rem;
+.body-container{
+    width: auto;
 }
-
-h5 {
-  font-size: 1rem;
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-bottom: 5vmax;
+    height: calc(100vh - 23vmin - 16px - 4vh); /*15vh includes .header margin-top & .header height. 96px includes navbar & footer*/
 }
-
-h6 {
-  font-size: 0.875rem;
-}
-
-p {
-  font-size: 1.125rem;
-  font-weight: 200;
-  line-height: 1.8;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.font-regular {
-  font-weight: 400;
-}
-
-.font-heavy {
-  font-weight: 700;
-}
-
-/* POSITIONING */
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
-.center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.justify {
-  text-align: justify;
-}
-
-/* ==== GRID SYSTEM ==== */
-
-.container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row {
-  position: relative;
-  width: 100%;
-}
-
-.row [class^="col"] {
-  float: left;
-  margin: 0.5rem 2%;
-  min-height: 0.125rem;
-}
-
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  width: 96%;
-}
-
-.col-1-sm {
-  width: 4.33%;
-}
-
-.col-2-sm {
-  width: 12.66%;
-}
-
-.col-3-sm {
-  width: 21%;
-}
-
-.col-4-sm {
-  width: 29.33%;
-}
-
-.col-5-sm {
-  width: 37.66%;
-}
-
-.col-6-sm {
-  width: 46%;
-}
-
-.col-7-sm {
-  width: 54.33%;
-}
-
-.col-8-sm {
-  width: 62.66%;
-}
-
-.col-9-sm {
-  width: 71%;
-}
-
-.col-10-sm {
-  width: 79.33%;
-}
-
-.col-11-sm {
-  width: 87.66%;
-}
-
-.col-12-sm {
-  width: 96%;
-}
-
-.row::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.hidden-sm {
-  display: none;
-}
-
-/*540px 
-
-@media only screen and (min-width: 33.75em) {   
-  .container {
-    width: 80%;
-  }
-}
-
-*/
-
-@media only screen and (min-width: 55em) {  /* 720px */
-  .col-1 {
-    width: 4.33%;
-  }
-
-  .col-2 {
-    width: 12.66%;
-  }
-
-  .col-3 {
-    width: 21%;
-  }
-
-  .col-4 {
-    width: 29.33%;
-  }
-
-  .col-5 {
-    width: 37.66%;
-  }
-
-  .col-6 {
-    width: 46%;
-  }
-
-  .col-7 {
-    width: 54.33%;
-  }
-
-  .col-8 {
-    width: 62.66%;
-  }
-
-  .col-9 {
-    width: 71%;
-  }
-
-  .col-10 {
-    width: 79.33%;
-  }
-
-  .col-11 {
-    width: 87.66%;
-  }
-
-  .col-12 {
-    width: 96%;
-  }
-
-  .hidden-sm {
-    display: block;
-  }
-    
-    .no-right {
-        padding-right: 0;
+@media screen and (max-width: 1000px) {
+    .content{
+        height: auto;
     }
 }
-
-@media only screen and (min-width: 60em) { /* 960px */
-  .container {
-    /*width: 75%;*/
-    max-width: 100rem;
-  }
+.outer-content{
+    flex-direction: column;
+}
+.header{
+    height: 13vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 2vh 0 2vh 0;
+}
+.header span {
+    font-family: "Roboto" , sans-serif;
+    font-size: 4.4vmin;
+    color: #FFFFFF;
+}
+.logo{
+    height: 100%;
+    width: 11vmin; /*width: 80px;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
+.logo-box{
+    box-sizing: border-box;
+    border-radius: 1.4vmin; /*10px;*/
+    background-color: #2e2e2f;
+    width: 3.4vmin; /*25px;*/
+}
+.logo-1{
+    height: 80%;
+}
+.logo-2{
+    height: 50%;
+}
+.logo-3{
+    height: 25%;
+}
+.content-card{
+    font-family: "Roboto" , sans-serif;
+    letter-spacing: 0.05em;
+    display: flex;
+    background-color: #2e2e2f;
+    max-height: 65vh;
+    position: relative;
+    border-radius: 12px;
+    color: #FFFFFF;
+}
+.video-card{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+#stream1{
+    width: 100vmin;
+    max-width: 100%;
+    padding: 1%;
+    display: inline-block;
+}
+#playerElement{
+    width:100%;
+    height:0;
+    padding:0 0 56.25% 0
+}
+.menu-card{
+    font-size: 2vmin;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+}
+#get-date{
+    font-size: 2.4vmin;
+    margin-bottom: 2vmin;
+}
+#sodexo-menu div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: unset;
+}
+#sodexo-menu div p {
+    width: 50%;
+}
+#sodexo-menu div div{
+    margin-left: 5px;
+    justify-content: space-between;
+    width: 30%;
+}
+#sodexo-menu div div p:nth-child(1){
+    min-width: max-content;
+}
+#sodexo-menu div div p:nth-child(2){
+    margin-left: 1.5vw;
+    min-width: max-content;
+    display: block;
+}
+@media screen and (max-width: 1200px) {
+    #sodexo-menu div p {
+        margin-bottom: 0.5rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .video-card {
+        width: 90vmin;
+        margin-bottom: 20px;
+        padding: 2vh 0;
+    }
+    .menu-card {
+        width: 90vw;
+        margin-bottom: 20px;
+        font-size: 1.6vmax;
+    }
+    #get-date{
+        margin: 1vmax 0 2vmax 0;
+        font-size: 1.8vmax;
+    }
+    .content-card{
+        max-height: initial;
+    }
+    #sodexo-menu div p {
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    #sodexo-menu div div p:nth-child(2){
+        display: none;
+    }
 }
